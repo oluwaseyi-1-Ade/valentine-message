@@ -13,15 +13,12 @@ import img8 from './assets/IMG-20251217-WA0037.jpg'
 import img9 from './assets/IMG-20251217-WA0040.jpg'
 import img10 from './assets/IMG-20260201-WA0063.jpg'
 import img11 from './assets/IMG-20260201-WA0065.jpg'
-import img12 from './assets/IMG-20260201-WA0069.jpg'
-import img13 from './assets/IMG_20240320_124846.JPG.jpg'
 import img14 from './assets/IMG_20241128_190332.jpg'
 import img15 from './assets/IMG_20241129_085111.jpg'
-import img16 from './assets/SAVE_20251129_010357.jpg'
 
 const images = [
   img1, img2, img3, img4, img5, img6, img7, img8, 
-  img9, img10, img11, img12, img13, img14, img15, img16
+  img9, img10, img11, img14, img15
 ];
 
 function App() {
