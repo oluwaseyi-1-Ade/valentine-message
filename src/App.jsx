@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import masoyiyata from './assets/Masoyiyata.mp3';
+
+
 
 // Importing user images
 import img1 from './assets/IMG-20220920-WA0286(1).jpg'
@@ -33,6 +36,26 @@ function App() {
         setCurrentSlide((prev) => (prev + 1) % images.length);
       }, 3000); // 3 seconds per slide
       return () => clearInterval(interval);
+    }
+  }, [accepted]);
+
+  // Audio Logic
+  useEffect(() => {
+    if (accepted) {
+      const songUrl = masoyiyata;
+      
+      const audio = new Audio(songUrl);
+      audio.volume = 0.6;
+      audio.loop = true;
+      
+      audio.play().catch(error => {
+        console.log("Audio playback failed:", error);
+      });
+
+      return () => {
+        audio.pause();
+        audio.currentTime = 0;
+      };
     }
   }, [accepted]);
 
